@@ -3,4 +3,9 @@ trigger:
   - main
 pool: Default
 steps:
-  -  script: ./mvnw clean package
+  - task: Maven@4
+    displayname: maven build
+    inputs:
+        mavenPOMFile:: 'pom.xml'
+        goals: "clean package"
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
