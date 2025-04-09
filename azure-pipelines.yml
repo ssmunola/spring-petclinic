@@ -3,4 +3,4 @@ trigger:
   - main
 pool: Default
 steps:
-  - mvnw clean package
+  - ./mvnw clean package
