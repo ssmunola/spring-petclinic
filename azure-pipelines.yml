@@ -1,11 +1,12 @@
+---
 name: petclinic
 trigger:
   - main
 pool: Default
 steps:
-- task: Maven@4
-  displayname: maven build
-  inputs:
-    mavenPOMFile:: 'pom.xml'
-    goals: "clean package"
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+  - task: Maven@4
+    displayname: maven build
+    inputs:
+      "mavenPOMFile:": pom.xml
+      goals: clean package
+      testResultsFiles: "**/surefire-reports/TEST-*.xml"
