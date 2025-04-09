@@ -1,0 +1,6 @@
+name: petclinic
+trigger:
+  - main
+pool: Default
+steps:
+  - mvnw clean package
