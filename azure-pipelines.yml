@@ -5,8 +5,5 @@ trigger:
   - main
 pool: Default
 steps:
-  - task: Maven@4
-    inputs:
-      mavenPOMFile:: pom.xml
-      goals: clean package
-      testResultsFiles: "**/surefire-reports/TEST-*.xml"
+  - script: ./mvnw clean package
+  
